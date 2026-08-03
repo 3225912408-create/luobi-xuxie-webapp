@@ -1,0 +1,13 @@
+{
+  "name": "落笔续写",
+  "short_name": "落笔续写",
+  "description": "张续与落学富的双人纪念与此刻分享空间",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8f4ef",
+  "theme_color": "#713746",
+  "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

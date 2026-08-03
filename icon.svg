@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="落笔续写图标">
+  <rect width="512" height="512" rx="116" fill="#713746"/>
+  <circle cx="256" cy="256" r="160" fill="#f8f4ef" opacity=".12"/>
+  <path d="M159 169c53-41 143-38 194 5-18 7-41 22-56 40-35-17-78-18-112-2-7-16-16-31-26-43Z" fill="#f5dce2"/>
+  <path d="M175 223c28 6 55 23 81 52 27-29 54-46 81-52-8 52-35 93-81 124-46-31-73-72-81-124Z" fill="#f8f4ef"/>
+  <text x="256" y="408" text-anchor="middle" font-family="serif" font-size="48" letter-spacing="10" fill="#f8f4ef">落续</text>
+</svg>

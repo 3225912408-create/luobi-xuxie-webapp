@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#713746">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="落笔续写">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <title>落笔续写</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f8f4ef}
+    iframe{display:block;width:100%;height:100%;border:0;background:#f8f4ef}
+  </style>
+</head>
+<body>
+  <iframe src="./preview.html" title="落笔续写"></iframe>
+  <script>if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'))}</script>
+</body>
+</html>

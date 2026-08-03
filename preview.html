@@ -1,0 +1,2419 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src 'self' blob:; connect-src 'self' blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#713746">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="落笔续写">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon.svg">
+<title>落笔续写</title>
+<style>:root{color-scheme:light dark;background:light-dark(#f8f4ef,#181419)}html,body{margin:0;min-height:100%;background:inherit}body{box-sizing:border-box;padding:max(env(safe-area-inset-top),.35rem) .35rem max(env(safe-area-inset-bottom),.35rem)}iframe{display:block;width:100%;height:calc(100dvh - max(env(safe-area-inset-top),.7rem) - max(env(safe-area-inset-bottom),.7rem));margin:0 auto;border:0}</style>
+</head>
+<body>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Luobi Xuxie Preview" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src 'self' blob:; connect-src 'self' blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Luobi Xuxie Preview&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --red: light-dark(rgb(186 38 35), rgb(250 66 62));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --radius: var(--border-radius-lg, 12.5px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: 5px;
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: superellipse(1.5);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: superellipse(1.5);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: superellipse(1.5);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: superellipse(1.5);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+    [aria-pressed=&quot;true&quot;],
+    [aria-selected=&quot;true&quot;],
+    .is-selected
+  ) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: 16px !important;
+  height: 16px !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;luobi-prototype&quot;&gt;&lt;/div&gt;
+
+&lt;style&gt;
+  #luobi-prototype {
+    --lx-paper: light-dark(#f8f4ef, #181419);
+    --lx-paper-deep: light-dark(#efe6df, #241c23);
+    --lx-surface: light-dark(#fffdfb, #211b21);
+    --lx-ink: light-dark(#352b31, #f7eef3);
+    --lx-muted: light-dark(#85777e, #bbaeb5);
+    --lx-line: light-dark(#eadfd9, #3d3039);
+    --lx-rose: light-dark(#b75f74, #dc8399);
+    --lx-rose-soft: light-dark(#f5dce2, #472b35);
+    --lx-wine: light-dark(#713746, #f1a8ba);
+    --lx-gold: light-dark(#b28a50, #dcb97c);
+    --lx-good: light-dark(#547b68, #8ac0a5);
+    --lx-shadow: light-dark(rgba(73, 45, 57, .18), rgba(0, 0, 0, .42));
+    --lx-sky-top: light-dark(#696a9b, #34365e);
+    --lx-sky-mid: light-dark(#e79289, #a35766);
+    --lx-sky-low: light-dark(#f6c58f, #c17c62);
+    --lx-hill: light-dark(#59434c, #241d27);
+    --lx-night-top: light-dark(#353652, #171827);
+    --lx-night-low: light-dark(#7b5572, #4d3048);
+    --lx-coffee: light-dark(#9a6245, #c88762);
+    --lx-cream: light-dark(#eed8c2, #63483e);
+    color-scheme: light dark;
+    width: 100%;
+    color: var(--lx-ink);
+    font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif;
+  }
+
+  #luobi-prototype * {
+    box-sizing: border-box;
+  }
+
+  #luobi-prototype button,
+  #luobi-prototype input,
+  #luobi-prototype textarea {
+    font: inherit;
+  }
+
+  #luobi-prototype button {
+    cursor: pointer;
+  }
+
+  #luobi-prototype .lx-stage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0 14px;
+  }
+
+  #luobi-prototype .lx-device-label {
+    width: min(390px, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    color: var(--lx-muted);
+    font-size: 12px;
+  }
+
+  #luobi-prototype .lx-device-label strong {
+    color: var(--lx-ink);
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-phone {
+    position: relative;
+    width: min(390px, 100%);
+    min-height: 690px;
+    overflow: hidden;
+    border: 1px solid var(--lx-line);
+    border-radius: 34px;
+    background: var(--lx-paper);
+    box-shadow: 0 18px 48px var(--lx-shadow);
+  }
+
+  #luobi-prototype .lx-status {
+    height: 32px;
+    padding: 10px 22px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-status-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  #luobi-prototype .lx-status-icons svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  #luobi-prototype .lx-app-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px 10px;
+  }
+
+  #luobi-prototype .lx-brand {
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-avatar {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--lx-line);
+    border-radius: 50%;
+    background: var(--lx-surface);
+    color: var(--lx-rose);
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 13px;
+  }
+
+  #luobi-prototype .lx-main {
+    padding: 0 16px 16px;
+  }
+
+  #luobi-prototype .lx-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 22px 20px;
+    border-radius: 26px;
+    background:
+      radial-gradient(circle at 85% 16%, var(--lx-rose-soft), transparent 31%),
+      linear-gradient(135deg, var(--lx-surface), var(--lx-paper-deep));
+    border: 1px solid var(--lx-line);
+  }
+
+  #luobi-prototype .lx-hero-kicker {
+    color: var(--lx-muted);
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  #luobi-prototype .lx-days {
+    margin: 7px 0 2px;
+    font-family: Georgia, &quot;Times New Roman&quot;, serif;
+    font-size: 62px;
+    line-height: .95;
+    font-weight: 400;
+    color: var(--lx-wine);
+  }
+
+  #luobi-prototype .lx-days-unit {
+    margin-left: 4px;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 15px;
+    color: var(--lx-muted);
+  }
+
+  #luobi-prototype .lx-hero-foot {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--lx-muted);
+    font-size: 12px;
+  }
+
+  #luobi-prototype .lx-hero-foot strong {
+    color: var(--lx-ink);
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-section-head {
+    margin: 18px 2px 10px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  #luobi-prototype .lx-section-head h2,
+  #luobi-prototype .lx-section-head h3 {
+    margin: 0;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-section-head h2 {
+    font-size: 18px;
+  }
+
+  #luobi-prototype .lx-section-head h3 {
+    font-size: 16px;
+  }
+
+  #luobi-prototype .lx-section-head span {
+    color: var(--lx-muted);
+    font-size: 11px;
+  }
+
+  #luobi-prototype .lx-moment {
+    overflow: hidden;
+    border: 1px solid var(--lx-line);
+    border-radius: 22px;
+    background: var(--lx-surface);
+  }
+
+  #luobi-prototype .lx-photo {
+    position: relative;
+    width: 100%;
+    height: 172px;
+    overflow: hidden;
+  }
+
+  #luobi-prototype .lx-photo-sunset {
+    background: linear-gradient(to bottom, var(--lx-sky-top), var(--lx-sky-mid) 52%, var(--lx-sky-low));
+  }
+
+  #luobi-prototype .lx-photo-night {
+    background: linear-gradient(to bottom, var(--lx-night-top), var(--lx-night-low));
+  }
+
+  #luobi-prototype .lx-photo-coffee {
+    background:
+      radial-gradient(ellipse at 50% 54%, var(--lx-coffee) 0 15%, var(--lx-cream) 16% 27%, transparent 28%),
+      linear-gradient(135deg, var(--lx-paper-deep), var(--lx-surface));
+  }
+
+  #luobi-prototype .lx-sun {
+    position: absolute;
+    top: 32px;
+    right: 54px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: light-dark(#ffe3b3, #f4ba87);
+    box-shadow: 0 0 32px light-dark(rgba(255, 222, 170, .72), rgba(244, 186, 135, .38));
+  }
+
+  #luobi-prototype .lx-hill-one,
+  #luobi-prototype .lx-hill-two {
+    position: absolute;
+    bottom: -44px;
+    width: 86%;
+    height: 112px;
+    border-radius: 50% 50% 0 0;
+    background: var(--lx-hill);
+  }
+
+  #luobi-prototype .lx-hill-one {
+    left: -20%;
+    transform: rotate(7deg);
+  }
+
+  #luobi-prototype .lx-hill-two {
+    right: -28%;
+    bottom: -58px;
+    opacity: .76;
+    transform: rotate(-8deg);
+  }
+
+  #luobi-prototype .lx-stars {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 16% 22%, light-dark(#fff4df, #ffe7b8) 0 1px, transparent 2px),
+      radial-gradient(circle at 35% 40%, light-dark(#fff4df, #ffe7b8) 0 1px, transparent 2px),
+      radial-gradient(circle at 65% 18%, light-dark(#fff4df, #ffe7b8) 0 1.5px, transparent 2.5px),
+      radial-gradient(circle at 82% 44%, light-dark(#fff4df, #ffe7b8) 0 1px, transparent 2px),
+      radial-gradient(circle at 53% 65%, light-dark(#fff4df, #ffe7b8) 0 1px, transparent 2px);
+  }
+
+  #luobi-prototype .lx-moment-copy {
+    padding: 13px 15px 15px;
+  }
+
+  #luobi-prototype .lx-moment-copy p {
+    margin: 0;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 14px;
+  }
+
+  #luobi-prototype .lx-meta {
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--lx-muted);
+    font-size: 11px;
+  }
+
+  #luobi-prototype .lx-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  #luobi-prototype .lx-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  #luobi-prototype .lx-quick {
+    min-width: 0;
+    padding: 12px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--lx-line);
+    border-radius: 17px;
+    background: var(--lx-surface);
+    color: var(--lx-ink);
+    font-size: 11px;
+  }
+
+  #luobi-prototype .lx-quick svg {
+    color: var(--lx-rose);
+  }
+
+  #luobi-prototype .lx-nav {
+    margin: 0 10px 10px;
+    padding: 8px 8px 7px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: end;
+    border: 1px solid var(--lx-line);
+    border-radius: 22px;
+    background: var(--lx-surface);
+  }
+
+  #luobi-prototype .lx-nav button {
+    padding: 4px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    border: 0;
+    background: transparent;
+    color: var(--lx-muted);
+    font-size: 10px;
+  }
+
+  #luobi-prototype .lx-nav button[aria-current=&quot;page&quot;] {
+    color: var(--lx-wine);
+  }
+
+  #luobi-prototype .lx-nav .lx-write-button {
+    width: 48px;
+    height: 48px;
+    margin: -20px auto 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--lx-wine);
+    color: var(--lx-paper);
+    box-shadow: 0 7px 18px var(--lx-shadow);
+  }
+
+  #luobi-prototype .lx-page-title {
+    padding: 5px 4px 10px;
+  }
+
+  #luobi-prototype .lx-page-title h1 {
+    margin: 0 0 4px;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-page-title p {
+    margin: 0;
+    color: var(--lx-muted);
+    font-size: 12px;
+  }
+
+  #luobi-prototype .lx-chapter {
+    position: relative;
+    padding-left: 22px;
+  }
+
+  #luobi-prototype .lx-chapter::before {
+    content: &quot;&quot;;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    bottom: -10px;
+    width: 1px;
+    background: var(--lx-line);
+  }
+
+  #luobi-prototype .lx-chapter:last-child::before {
+    bottom: 24px;
+  }
+
+  #luobi-prototype .lx-chapter-dot {
+    position: absolute;
+    left: 3px;
+    top: 6px;
+    width: 9px;
+    height: 9px;
+    border: 2px solid var(--lx-paper);
+    border-radius: 50%;
+    background: var(--lx-rose);
+    box-shadow: 0 0 0 1px var(--lx-rose);
+  }
+
+  #luobi-prototype .lx-chapter-date {
+    color: var(--lx-muted);
+    font-size: 11px;
+  }
+
+  #luobi-prototype .lx-chapter h3 {
+    margin: 2px 0 8px;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-chapter-row {
+    margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+
+  #luobi-prototype .lx-thumb {
+    height: 68px;
+    border-radius: 14px;
+  }
+
+  #luobi-prototype .lx-chapter-copy p {
+    margin: 0 0 5px;
+    font-size: 12px;
+  }
+
+  #luobi-prototype .lx-chapter-copy span {
+    color: var(--lx-muted);
+    font-size: 10px;
+  }
+
+  #luobi-prototype .lx-compose-photo {
+    height: 310px;
+    border-radius: 24px;
+  }
+
+  #luobi-prototype .lx-camera-mark {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: light-dark(#fffaf7, #fffaf7);
+    font-size: 11px;
+  }
+
+  #luobi-prototype .lx-camera-mark span {
+    padding: 5px 8px;
+    border-radius: 10px;
+    background: light-dark(rgba(45, 27, 35, .42), rgba(20, 12, 17, .58));
+  }
+
+  #luobi-prototype .lx-caption {
+    width: 100%;
+    min-height: 70px;
+    margin-top: 10px;
+    padding: 12px 13px;
+    resize: none;
+    border: 1px solid var(--lx-line);
+    border-radius: 16px;
+    background: var(--lx-surface);
+    color: var(--lx-ink);
+  }
+
+  #luobi-prototype .lx-compose-options {
+    margin: 9px 1px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  #luobi-prototype .lx-option,
+  #luobi-prototype .lx-secondary,
+  #luobi-prototype .lx-reaction {
+    padding: 7px 10px;
+    border: 1px solid var(--lx-line);
+    border-radius: 13px;
+    background: var(--lx-surface);
+    color: var(--lx-ink);
+    font-size: 11px;
+  }
+
+  #luobi-prototype .lx-primary {
+    width: 100%;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 16px;
+    background: var(--lx-wine);
+    color: var(--lx-paper);
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-mail-list,
+  #luobi-prototype .lx-us-list {
+    display: grid;
+    gap: 9px;
+  }
+
+  #luobi-prototype .lx-mail,
+  #luobi-prototype .lx-us-item {
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    border: 1px solid var(--lx-line);
+    border-radius: 18px;
+    background: var(--lx-surface);
+  }
+
+  #luobi-prototype .lx-mail-icon,
+  #luobi-prototype .lx-us-icon {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: var(--lx-rose-soft);
+    color: var(--lx-wine);
+  }
+
+  #luobi-prototype .lx-mail-copy,
+  #luobi-prototype .lx-us-copy {
+    min-width: 0;
+    flex: 1;
+  }
+
+  #luobi-prototype .lx-mail-copy strong,
+  #luobi-prototype .lx-us-copy strong {
+    display: block;
+    margin-bottom: 3px;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-mail-copy span,
+  #luobi-prototype .lx-us-copy span {
+    display: block;
+    overflow: hidden;
+    color: var(--lx-muted);
+    font-size: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  #luobi-prototype .lx-mail button,
+  #luobi-prototype .lx-us-item button {
+    flex: 0 0 auto;
+  }
+
+  #luobi-prototype .lx-wish-check {
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--lx-line);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--lx-good);
+  }
+
+  #luobi-prototype .lx-wish-check.is-done {
+    background: var(--lx-good);
+    color: var(--lx-paper);
+  }
+
+  #luobi-prototype .lx-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background:
+      radial-gradient(circle at 18% 18%, var(--lx-rose-soft), transparent 32%),
+      radial-gradient(circle at 82% 77%, var(--lx-paper-deep), transparent 42%),
+      var(--lx-paper);
+  }
+
+  #luobi-prototype .lx-intro-copy {
+    padding: 110px 34px 40px;
+    text-align: center;
+  }
+
+  #luobi-prototype .lx-intro-mark {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 28px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--lx-rose);
+    border-radius: 50%;
+    color: var(--lx-wine);
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 18px;
+  }
+
+  #luobi-prototype .lx-intro h1 {
+    margin: 0;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 31px;
+    font-weight: 500;
+    letter-spacing: 7px;
+  }
+
+  #luobi-prototype .lx-intro-names {
+    margin: 14px 0 40px;
+    color: var(--lx-muted);
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  #luobi-prototype .lx-intro-quote {
+    margin: 0;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  #luobi-prototype .lx-intro-date {
+    margin-top: 22px;
+    color: var(--lx-gold);
+    font-family: Georgia, &quot;Times New Roman&quot;, serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  #luobi-prototype .lx-intro-action {
+    padding: 0 30px 34px;
+  }
+
+  #luobi-prototype .lx-android {
+    min-height: 690px;
+    color: light-dark(#fff8f5, #fff8f5);
+    background: linear-gradient(155deg, var(--lx-night-top), var(--lx-night-low));
+  }
+
+  #luobi-prototype .lx-android .lx-status {
+    color: light-dark(#fff8f5, #fff8f5);
+  }
+
+  #luobi-prototype .lx-lock-time {
+    padding: 48px 22px 34px;
+    text-align: center;
+  }
+
+  #luobi-prototype .lx-lock-time strong {
+    display: block;
+    font-family: Georgia, &quot;Times New Roman&quot;, serif;
+    font-size: 62px;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  #luobi-prototype .lx-lock-time span {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    opacity: .82;
+  }
+
+  #luobi-prototype .lx-android-notification {
+    margin: 0 14px;
+    padding: 13px;
+    border: 1px solid light-dark(rgba(255,255,255,.36), rgba(255,255,255,.2));
+    border-radius: 22px;
+    background: light-dark(rgba(255,255,255,.88), rgba(33,27,33,.88));
+    color: var(--lx-ink);
+    box-shadow: 0 12px 28px light-dark(rgba(20,12,18,.18), rgba(0,0,0,.3));
+    backdrop-filter: blur(18px);
+  }
+
+  #luobi-prototype .lx-notification-head {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--lx-muted);
+    font-size: 10px;
+  }
+
+  #luobi-prototype .lx-notification-logo {
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    background: var(--lx-wine);
+    color: var(--lx-paper);
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+  }
+
+  #luobi-prototype .lx-notification-body {
+    display: grid;
+    grid-template-columns: 1fr 78px;
+    gap: 11px;
+  }
+
+  #luobi-prototype .lx-notification-body strong {
+    display: block;
+    margin-bottom: 5px;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-notification-body p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  #luobi-prototype .lx-notification-photo {
+    height: 78px;
+    border-radius: 13px;
+  }
+
+  #luobi-prototype .lx-notification-tap {
+    width: 100%;
+    margin-top: 10px;
+    padding: 7px;
+    border: 0;
+    border-top: 1px solid var(--lx-line);
+    background: transparent;
+    color: var(--lx-wine);
+    font-size: 11px;
+  }
+
+  #luobi-prototype .lx-lock-note {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10px;
+    opacity: .7;
+  }
+
+  #luobi-prototype .lx-back-sender {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    padding: 9px 13px;
+    border: 1px solid light-dark(rgba(255,255,255,.38), rgba(255,255,255,.24));
+    border-radius: 15px;
+    background: light-dark(rgba(35,25,31,.28), rgba(20,13,18,.42));
+    color: light-dark(#fff8f5, #fff8f5);
+    white-space: nowrap;
+  }
+
+  #luobi-prototype .lx-received-photo {
+    height: 360px;
+    border-radius: 24px;
+  }
+
+  #luobi-prototype .lx-received-words {
+    margin: 14px 4px 4px;
+    text-align: center;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  #luobi-prototype .lx-received-time {
+    display: block;
+    margin-top: 6px;
+    color: var(--lx-muted);
+    font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;
+    font-size: 10px;
+  }
+
+  #luobi-prototype .lx-reactions {
+    margin: 12px 0 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  #luobi-prototype .lx-reaction {
+    min-width: 52px;
+  }
+
+  #luobi-prototype .lx-toast {
+    position: absolute;
+    z-index: 20;
+    left: 50%;
+    bottom: 88px;
+    width: max-content;
+    max-width: calc(100% - 32px);
+    transform: translateX(-50%);
+    padding: 9px 13px;
+    border-radius: 14px;
+    background: var(--lx-ink);
+    color: var(--lx-paper);
+    box-shadow: 0 10px 24px var(--lx-shadow);
+    font-size: 11px;
+    text-align: center;
+  }
+
+  #luobi-prototype .lx-overlay {
+    position: absolute;
+    z-index: 30;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    background: light-dark(rgba(53,43,49,.28), rgba(0,0,0,.46));
+  }
+
+  #luobi-prototype .lx-sheet {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid var(--lx-line);
+    border-radius: 24px;
+    background: var(--lx-surface);
+    box-shadow: 0 16px 40px var(--lx-shadow);
+  }
+
+  #luobi-prototype .lx-sheet h3 {
+    margin: 0 0 5px;
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  #luobi-prototype .lx-sheet p {
+    margin: 0 0 14px;
+    color: var(--lx-muted);
+    font-size: 11px;
+  }
+
+  #luobi-prototype .lx-moods {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+    margin-bottom: 12px;
+  }
+
+  #luobi-prototype .lx-mood {
+    padding: 11px 4px;
+    border: 1px solid var(--lx-line);
+    border-radius: 14px;
+    background: var(--lx-paper);
+    color: var(--lx-ink);
+    font-size: 18px;
+  }
+
+  #luobi-prototype .lx-secret-input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 11px 12px;
+    border: 1px solid var(--lx-line);
+    border-radius: 14px;
+    background: var(--lx-paper);
+    color: var(--lx-ink);
+  }
+
+  #luobi-prototype .lx-secret-reveal {
+    padding: 15px;
+    border-radius: 16px;
+    background: var(--lx-rose-soft);
+    color: var(--lx-wine);
+    font-family: &quot;Songti SC&quot;, &quot;STSong&quot;, serif;
+    line-height: 1.8;
+    text-align: center;
+  }
+
+  #luobi-prototype .lx-sheet-actions {
+    display: flex;
+    gap: 8px;
+  }
+
+  #luobi-prototype .lx-sheet-actions button {
+    flex: 1;
+  }
+
+  @media (max-width: 420px) {
+    #luobi-prototype .lx-stage {
+      padding: 0;
+    }
+
+    #luobi-prototype .lx-device-label {
+      padding-inline: 4px;
+    }
+
+    #luobi-prototype .lx-phone {
+      border-radius: 27px;
+    }
+
+    #luobi-prototype .lx-days {
+      font-size: 54px;
+    }
+  }
+&lt;/style&gt;
+
+&lt;script&gt;
+  (() =&gt; {
+    const root = document.getElementById(&#x27;luobi-prototype&#x27;);
+    const state = {
+      intro: true,
+      device: &#x27;iphone&#x27;,
+      view: &#x27;home&#x27;,
+      overlay: null,
+      toast: &#x27;&#x27;,
+      caption: &#x27;回家的晚霞很好看，想让你也看见。&#x27;,
+      replySent: false,
+      wishes: [true, false, false],
+      voicePlaying: false,
+      secretSolved: false,
+      mood: &#x27;晴天&#x27;
+    };
+
+    const statusBar = () =&gt; &#x27;&#x27;;
+
+    const sunsetPhoto = (extra = &#x27;&#x27;) =&gt; `
+      &lt;div class=&quot;lx-photo lx-photo-sunset ${extra}&quot; role=&quot;img&quot; aria-label=&quot;粉紫色晚霞下的远山&quot;&gt;
+        &lt;span class=&quot;lx-sun&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;lx-hill-one&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;lx-hill-two&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;`;
+
+    const nightPhoto = (extra = &#x27;&#x27;) =&gt; `
+      &lt;div class=&quot;lx-photo lx-photo-night ${extra}&quot; role=&quot;img&quot; aria-label=&quot;有星星的紫色夜空&quot;&gt;
+        &lt;span class=&quot;lx-stars&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;lx-hill-one&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;lx-hill-two&quot;&gt;&lt;/span&gt;
+      &lt;/div&gt;`;
+
+    const coffeePhoto = (extra = &#x27;&#x27;) =&gt; `
+      &lt;div class=&quot;lx-photo lx-photo-coffee ${extra}&quot; role=&quot;img&quot; aria-label=&quot;桌面上的一杯咖啡&quot;&gt;&lt;/div&gt;`;
+
+    const appHeader = () =&gt; `
+      ${statusBar()}
+      &lt;header class=&quot;lx-app-head&quot;&gt;
+        &lt;div class=&quot;lx-brand&quot;&gt;落笔续写&lt;/div&gt;
+        &lt;div class=&quot;lx-avatar&quot; aria-label=&quot;张续的头像&quot;&gt;续&lt;/div&gt;
+      &lt;/header&gt;`;
+
+    const nav = () =&gt; {
+      const item = (view, icon, label) =&gt; `
+        &lt;button type=&quot;button&quot; data-nav=&quot;${view}&quot; ${state.view === view ? &#x27;aria-current=&quot;page&quot;&#x27; : &#x27;&#x27;}&gt;
+          &lt;i data-lucide=&quot;${icon}&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;${label}&lt;/span&gt;
+        &lt;/button&gt;`;
+      return `
+        &lt;nav class=&quot;lx-nav&quot; aria-label=&quot;主要页面&quot;&gt;
+          ${item(&#x27;home&#x27;, &#x27;house&#x27;, &#x27;首页&#x27;)}
+          ${item(&#x27;story&#x27;, &#x27;book-open&#x27;, &#x27;篇章&#x27;)}
+          &lt;button type=&quot;button&quot; class=&quot;lx-write-button&quot; data-nav=&quot;write&quot; aria-label=&quot;落下一笔&quot;&gt;
+            &lt;i data-lucide=&quot;camera&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+          ${item(&#x27;mail&#x27;, &#x27;mail&#x27;, &#x27;信箱&#x27;)}
+          ${item(&#x27;us&#x27;, &#x27;heart&#x27;, &#x27;我们&#x27;)}
+        &lt;/nav&gt;`;
+    };
+
+    const homeView = () =&gt; `
+      &lt;main class=&quot;lx-main&quot;&gt;
+        &lt;section class=&quot;lx-hero&quot; aria-label=&quot;恋爱纪念日&quot;&gt;
+          &lt;div class=&quot;lx-hero-kicker&quot;&gt;我们的故事 · 第&lt;/div&gt;
+          &lt;div&gt;&lt;span class=&quot;lx-days&quot;&gt;401&lt;/span&gt;&lt;span class=&quot;lx-days-unit&quot;&gt;天&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;lx-hero-foot&quot;&gt;
+            &lt;span&gt;始于 &lt;strong&gt;2025.06.29&lt;/strong&gt;&lt;/span&gt;
+            &lt;span&gt;下次纪念日 &lt;strong&gt;330 天&lt;/strong&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;div class=&quot;lx-section-head&quot;&gt;
+          &lt;h2&gt;最近一笔&lt;/h2&gt;&lt;span&gt;今天 18:42&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;article class=&quot;lx-moment&quot;&gt;
+          ${sunsetPhoto()}
+          &lt;div class=&quot;lx-moment-copy&quot;&gt;
+            &lt;p&gt;“回家的晚霞很好看，想让你也看见。”&lt;/p&gt;
+            &lt;div class=&quot;lx-meta&quot;&gt;
+              &lt;span&gt;张续 · 杭州&lt;/span&gt;
+              &lt;span&gt;&lt;i data-lucide=&quot;heart&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 落学富已续写&lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/article&gt;
+
+        &lt;div class=&quot;lx-section-head&quot;&gt;&lt;h3&gt;轻轻告诉他&lt;/h3&gt;&lt;span&gt;无需组织语言&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;lx-quick-grid&quot;&gt;
+          &lt;button type=&quot;button&quot; class=&quot;lx-quick&quot; data-action=&quot;miss&quot;&gt;&lt;i data-lucide=&quot;heart-handshake&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;想你了&lt;/span&gt;&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;lx-quick&quot; data-action=&quot;mood&quot;&gt;&lt;i data-lucide=&quot;cloud-sun&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;${state.mood}&lt;/span&gt;&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;lx-quick&quot; data-action=&quot;secret&quot;&gt;&lt;i data-lucide=&quot;key-round&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;我们的暗号&lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/main&gt;`;
+
+    const storyView = () =&gt; `
+      &lt;main class=&quot;lx-main&quot;&gt;
+        &lt;div class=&quot;lx-page-title&quot;&gt;&lt;h1&gt;我们的篇章&lt;/h1&gt;&lt;p&gt;每一次落笔，都让故事有迹可循&lt;/p&gt;&lt;/div&gt;
+        &lt;section aria-label=&quot;恋爱时间轴&quot;&gt;
+          &lt;article class=&quot;lx-chapter&quot;&gt;
+            &lt;span class=&quot;lx-chapter-dot&quot;&gt;&lt;/span&gt;
+            &lt;div class=&quot;lx-chapter-date&quot;&gt;2026.08.03 · 第 401 天&lt;/div&gt;
+            &lt;h3&gt;夏日晚霞&lt;/h3&gt;
+            &lt;div class=&quot;lx-chapter-row&quot;&gt;
+              ${sunsetPhoto(&#x27;lx-thumb&#x27;)}
+              &lt;div class=&quot;lx-chapter-copy&quot;&gt;&lt;p&gt;把下班路上看到的天空寄给你。&lt;/p&gt;&lt;span&gt;1 张照片 · 2 条续写&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;lx-chapter&quot;&gt;
+            &lt;span class=&quot;lx-chapter-dot&quot;&gt;&lt;/span&gt;
+            &lt;div class=&quot;lx-chapter-date&quot;&gt;2026.06.29 · 一周年&lt;/div&gt;
+            &lt;h3&gt;我们的第一年&lt;/h3&gt;
+            &lt;div class=&quot;lx-chapter-row&quot;&gt;
+              ${nightPhoto(&#x27;lx-thumb&#x27;)}
+              &lt;div class=&quot;lx-chapter-copy&quot;&gt;&lt;p&gt;从第一天，到第 365 天。&lt;/p&gt;&lt;span&gt;12 张照片 · 1 封语音信&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;lx-chapter&quot;&gt;
+            &lt;span class=&quot;lx-chapter-dot&quot;&gt;&lt;/span&gt;
+            &lt;div class=&quot;lx-chapter-date&quot;&gt;2025.06.29 · 第 1 天&lt;/div&gt;
+            &lt;h3&gt;故事从这里开始&lt;/h3&gt;
+            &lt;div class=&quot;lx-chapter-row&quot;&gt;
+              ${coffeePhoto(&#x27;lx-thumb&#x27;)}
+              &lt;div class=&quot;lx-chapter-copy&quot;&gt;&lt;p&gt;那一天，我们有了一个共同的日期。&lt;/p&gt;&lt;span&gt;初见篇 · 已珍藏&lt;/span&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;
+        &lt;/section&gt;
+      &lt;/main&gt;`;
+
+    const writeView = () =&gt; `
+      &lt;main class=&quot;lx-main&quot;&gt;
+        &lt;div class=&quot;lx-page-title&quot;&gt;&lt;h1&gt;落下一笔&lt;/h1&gt;&lt;p&gt;把你此刻看到的世界寄给他&lt;/p&gt;&lt;/div&gt;
+        &lt;div class=&quot;lx-compose-photo lx-photo lx-photo-sunset&quot; role=&quot;img&quot; aria-label=&quot;准备发送的晚霞照片&quot;&gt;
+          &lt;span class=&quot;lx-sun&quot;&gt;&lt;/span&gt;&lt;span class=&quot;lx-hill-one&quot;&gt;&lt;/span&gt;&lt;span class=&quot;lx-hill-two&quot;&gt;&lt;/span&gt;
+          &lt;div class=&quot;lx-camera-mark&quot;&gt;&lt;span&gt;今天 18:42&lt;/span&gt;&lt;span&gt;重新拍摄&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;label for=&quot;lx-caption&quot; class=&quot;sr-only&quot;&gt;照片留言&lt;/label&gt;
+        &lt;textarea id=&quot;lx-caption&quot; class=&quot;lx-caption&quot; maxlength=&quot;80&quot;&gt;${state.caption}&lt;/textarea&gt;
+        &lt;div class=&quot;lx-compose-options&quot;&gt;
+          &lt;button type=&quot;button&quot; class=&quot;lx-option&quot;&gt;&lt;i data-lucide=&quot;mic&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 录一段声音&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;lx-option&quot;&gt;&lt;i data-lucide=&quot;map-pin&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 杭州&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;lx-option&quot;&gt;&lt;i data-lucide=&quot;eye-off&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 点击揭晓&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;button&quot; class=&quot;lx-primary&quot; data-action=&quot;send&quot;&gt;传送给落学富&lt;/button&gt;
+      &lt;/main&gt;`;
+
+    const mailView = () =&gt; `
+      &lt;main class=&quot;lx-main&quot;&gt;
+        &lt;div class=&quot;lx-page-title&quot;&gt;&lt;h1&gt;时光邮局&lt;/h1&gt;&lt;p&gt;有些话，要留给未来的某一天&lt;/p&gt;&lt;/div&gt;
+        &lt;div class=&quot;lx-mail-list&quot;&gt;
+          &lt;article class=&quot;lx-mail&quot;&gt;
+            &lt;div class=&quot;lx-mail-icon&quot;&gt;&lt;i data-lucide=&quot;lock-keyhole&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;div class=&quot;lx-mail-copy&quot;&gt;&lt;strong&gt;写给我们的第二年&lt;/strong&gt;&lt;span&gt;将在 2027.06.29 开启 · 还剩 330 天&lt;/span&gt;&lt;/div&gt;
+            &lt;button type=&quot;button&quot; class=&quot;lx-secondary&quot; data-action=&quot;locked&quot;&gt;未开启&lt;/button&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;lx-mail&quot;&gt;
+            &lt;div class=&quot;lx-mail-icon&quot;&gt;&lt;i data-lucide=&quot;cake-slice&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;div class=&quot;lx-mail-copy&quot;&gt;&lt;strong&gt;落先生，生日快乐&lt;/strong&gt;&lt;span&gt;一封照片信 · 由张续寄出&lt;/span&gt;&lt;/div&gt;
+            &lt;button type=&quot;button&quot; class=&quot;lx-secondary&quot; data-action=&quot;locked&quot;&gt;定时&lt;/button&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;lx-mail&quot;&gt;
+            &lt;div class=&quot;lx-mail-icon&quot;&gt;&lt;i data-lucide=&quot;volume-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;div class=&quot;lx-mail-copy&quot;&gt;&lt;strong&gt;第一周年的晚安&lt;/strong&gt;&lt;span&gt;${state.voicePlaying ? &#x27;正在播放 · 00:08 / 00:16&#x27; : &#x27;语音碎片 · 00:16&#x27;}&lt;/span&gt;&lt;/div&gt;
+            &lt;button type=&quot;button&quot; class=&quot;lx-secondary&quot; data-action=&quot;voice&quot;&gt;${state.voicePlaying ? &#x27;暂停&#x27; : &#x27;播放&#x27;}&lt;/button&gt;
+          &lt;/article&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;lx-section-head&quot;&gt;&lt;h3&gt;那年今日&lt;/h3&gt;&lt;span&gt;2025.08.03&lt;/span&gt;&lt;/div&gt;
+        &lt;article class=&quot;lx-moment&quot;&gt;
+          ${coffeePhoto(&#x27;lx-thumb&#x27;)}
+          &lt;div class=&quot;lx-moment-copy&quot;&gt;&lt;p&gt;“去年的今天，我们第一次聊到很晚。”&lt;/p&gt;&lt;div class=&quot;lx-meta&quot;&gt;&lt;span&gt;一年前的这一笔&lt;/span&gt;&lt;span&gt;重新寄给他&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/article&gt;
+      &lt;/main&gt;`;
+
+    const usView = () =&gt; {
+      const wish = (index, title, note) =&gt; `
+        &lt;article class=&quot;lx-us-item&quot;&gt;
+          &lt;button type=&quot;button&quot; class=&quot;lx-wish-check ${state.wishes[index] ? &#x27;is-done&#x27; : &#x27;&#x27;}&quot; data-wish=&quot;${index}&quot; aria-label=&quot;${state.wishes[index] ? &#x27;标记为未完成&#x27; : &#x27;标记为完成&#x27;}&quot;&gt;
+            ${state.wishes[index] ? &#x27;&lt;i data-lucide=&quot;check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#x27; : &#x27;&#x27;}
+          &lt;/button&gt;
+          &lt;div class=&quot;lx-us-copy&quot;&gt;&lt;strong&gt;${title}&lt;/strong&gt;&lt;span&gt;${note}&lt;/span&gt;&lt;/div&gt;
+        &lt;/article&gt;`;
+      return `
+        &lt;main class=&quot;lx-main&quot;&gt;
+          &lt;div class=&quot;lx-page-title&quot;&gt;&lt;h1&gt;未完待续&lt;/h1&gt;&lt;p&gt;我们还会一起完成很多小事&lt;/p&gt;&lt;/div&gt;
+          &lt;div class=&quot;lx-us-list&quot;&gt;
+            ${wish(0, &#x27;一起看一次海边日出&#x27;, &#x27;已完成 · 2026.05.02&#x27;)}
+            ${wish(1, &#x27;去一座陌生城市散步&#x27;, &#x27;等一个都有空的周末&#x27;)}
+            ${wish(2, &#x27;拍一组属于我们的照片&#x27;, &#x27;计划中&#x27;)}
+          &lt;/div&gt;
+
+          &lt;div class=&quot;lx-section-head&quot;&gt;&lt;h3&gt;我们的收藏&lt;/h3&gt;&lt;span&gt;仅彼此可见&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;lx-us-list&quot;&gt;
+            &lt;article class=&quot;lx-us-item&quot;&gt;&lt;div class=&quot;lx-us-icon&quot;&gt;&lt;i data-lucide=&quot;map&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class=&quot;lx-us-copy&quot;&gt;&lt;strong&gt;共同地图&lt;/strong&gt;&lt;span&gt;7 个地方 · 23 段回忆&lt;/span&gt;&lt;/div&gt;&lt;i data-lucide=&quot;chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/article&gt;
+            &lt;article class=&quot;lx-us-item&quot;&gt;&lt;div class=&quot;lx-us-icon&quot;&gt;&lt;i data-lucide=&quot;images&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class=&quot;lx-us-copy&quot;&gt;&lt;strong&gt;私密相册&lt;/strong&gt;&lt;span&gt;48 张照片 · 已加密保存&lt;/span&gt;&lt;/div&gt;&lt;i data-lucide=&quot;chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/article&gt;
+            &lt;article class=&quot;lx-us-item&quot;&gt;&lt;div class=&quot;lx-us-icon&quot;&gt;&lt;i data-lucide=&quot;sparkles&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class=&quot;lx-us-copy&quot;&gt;&lt;strong&gt;每日一问&lt;/strong&gt;&lt;span&gt;今天：最想和我重过哪一天？&lt;/span&gt;&lt;/div&gt;&lt;i data-lucide=&quot;chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/article&gt;
+          &lt;/div&gt;
+        &lt;/main&gt;`;
+    };
+
+    const overlay = () =&gt; {
+      if (state.overlay === &#x27;mood&#x27;) {
+        return `&lt;div class=&quot;lx-overlay&quot;&gt;&lt;section class=&quot;lx-sheet&quot; aria-label=&quot;选择今日心情&quot;&gt;&lt;h3&gt;今天是什么天气？&lt;/h3&gt;&lt;p&gt;让他不用追问，也能知道你此刻的心情。&lt;/p&gt;&lt;div class=&quot;lx-moods&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;lx-mood&quot; data-mood=&quot;晴天&quot; aria-label=&quot;晴天&quot;&gt;☀️&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;lx-mood&quot; data-mood=&quot;多云&quot; aria-label=&quot;多云&quot;&gt;⛅&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;lx-mood&quot; data-mood=&quot;雨天&quot; aria-label=&quot;雨天&quot;&gt;🌧️&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;lx-mood&quot; data-mood=&quot;打雷&quot; aria-label=&quot;打雷&quot;&gt;⛈️&lt;/button&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;lx-secondary&quot; data-action=&quot;close-overlay&quot;&gt;暂不修改&lt;/button&gt;&lt;/section&gt;&lt;/div&gt;`;
+      }
+      if (state.overlay === &#x27;secret&#x27;) {
+        return `&lt;div class=&quot;lx-overlay&quot;&gt;&lt;section class=&quot;lx-sheet&quot; aria-label=&quot;输入两人的暗号&quot;&gt;&lt;h3&gt;我们的暗号&lt;/h3&gt;&lt;p&gt;提示：故事开始的月与日。&lt;/p&gt;${state.secretSolved ? &#x27;&lt;div class=&quot;lx-secret-reveal&quot;&gt;落先生：&lt;br&gt;谢谢你来到我的故事里。&lt;br&gt;往后的每一页，也想继续和你写。&lt;/div&gt;&#x27; : &#x27;&lt;label for=&quot;lx-secret-code&quot; class=&quot;sr-only&quot;&gt;四位暗号&lt;/label&gt;&lt;input id=&quot;lx-secret-code&quot; class=&quot;lx-secret-input&quot; inputmode=&quot;numeric&quot; maxlength=&quot;4&quot; placeholder=&quot;输入四位暗号&quot;&gt;&lt;div class=&quot;lx-sheet-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;lx-secondary&quot; data-action=&quot;close-overlay&quot;&gt;取消&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;lx-primary&quot; data-action=&quot;check-secret&quot;&gt;解锁&lt;/button&gt;&lt;/div&gt;&#x27;}&lt;/section&gt;&lt;/div&gt;`;
+      }
+      return &#x27;&#x27;;
+    };
+
+    const iphoneScreen = () =&gt; {
+      const views = { home: homeView, story: storyView, write: writeView, mail: mailView, us: usView };
+      return `&lt;div class=&quot;lx-device-label&quot;&gt;&lt;strong&gt;张续的 iPhone&lt;/strong&gt;&lt;span&gt;发送端预览&lt;/span&gt;&lt;/div&gt;&lt;section class=&quot;lx-phone&quot;&gt;${appHeader()}${views[state.view]()}${nav()}${state.toast ? `&lt;div class=&quot;lx-toast&quot; role=&quot;status&quot;&gt;${state.toast}&lt;/div&gt;` : &#x27;&#x27;}${overlay()}&lt;/section&gt;`;
+    };
+
+    const androidLock = () =&gt; `
+      &lt;div class=&quot;lx-device-label&quot;&gt;&lt;strong&gt;落学富的 Android&lt;/strong&gt;&lt;span&gt;接收效果预览&lt;/span&gt;&lt;/div&gt;
+      &lt;section class=&quot;lx-phone lx-android&quot;&gt;
+        ${statusBar(true)}
+        &lt;div class=&quot;lx-lock-time&quot;&gt;&lt;strong&gt;18:42&lt;/strong&gt;&lt;span&gt;8 月 3 日 · 星期一&lt;/span&gt;&lt;/div&gt;
+        &lt;article class=&quot;lx-android-notification&quot;&gt;
+          &lt;div class=&quot;lx-notification-head&quot;&gt;&lt;span class=&quot;lx-notification-logo&quot;&gt;续&lt;/span&gt;&lt;span&gt;落笔续写 · 刚刚&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;lx-notification-body&quot;&gt;&lt;div&gt;&lt;strong&gt;张续刚刚落下一笔&lt;/strong&gt;&lt;p&gt;${state.caption}&lt;/p&gt;&lt;/div&gt;${sunsetPhoto(&#x27;lx-notification-photo&#x27;)}&lt;/div&gt;
+          &lt;button type=&quot;button&quot; class=&quot;lx-notification-tap&quot; data-action=&quot;open-notification&quot;&gt;点击查看并续写这一笔&lt;/button&gt;
+        &lt;/article&gt;
+        &lt;p class=&quot;lx-lock-note&quot;&gt;照片会在允许通知后显示在他的锁屏上&lt;/p&gt;
+        &lt;button type=&quot;button&quot; class=&quot;lx-back-sender&quot; data-action=&quot;back-sender&quot;&gt;返回张续的手机&lt;/button&gt;
+      &lt;/section&gt;`;
+
+    const receivedScreen = () =&gt; `
+      &lt;div class=&quot;lx-device-label&quot;&gt;&lt;strong&gt;落学富的 Android&lt;/strong&gt;&lt;span&gt;打开照片后的效果&lt;/span&gt;&lt;/div&gt;
+      &lt;section class=&quot;lx-phone&quot;&gt;
+        ${statusBar()}
+        &lt;header class=&quot;lx-app-head&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;lx-secondary&quot; data-action=&quot;android-lock&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; 返回&lt;/button&gt;&lt;div class=&quot;lx-brand&quot;&gt;她的一笔&lt;/div&gt;&lt;div class=&quot;lx-avatar&quot;&gt;续&lt;/div&gt;&lt;/header&gt;
+        &lt;main class=&quot;lx-main&quot;&gt;
+          ${sunsetPhoto(&#x27;lx-received-photo&#x27;)}
+          &lt;p class=&quot;lx-received-words&quot;&gt;“${state.caption}”&lt;span class=&quot;lx-received-time&quot;&gt;张续 · 今天 18:42 · 杭州&lt;/span&gt;&lt;/p&gt;
+          &lt;div class=&quot;lx-reactions&quot; aria-label=&quot;回应照片&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;lx-reaction&quot; data-action=&quot;reply&quot;&gt;❤️ 喜欢&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;lx-reaction&quot; data-action=&quot;reply&quot;&gt;🫂 抱抱&lt;/button&gt;
+            &lt;button type=&quot;button&quot; class=&quot;lx-reaction&quot; data-action=&quot;reply&quot;&gt;✍️ 续写&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;button type=&quot;button&quot; class=&quot;lx-primary&quot; data-action=&quot;reply&quot;&gt;${state.replySent ? &#x27;已告诉张续：我收到啦&#x27; : &#x27;告诉她：我收到啦&#x27;}&lt;/button&gt;
+        &lt;/main&gt;
+        ${state.toast ? `&lt;div class=&quot;lx-toast&quot; role=&quot;status&quot;&gt;${state.toast}&lt;/div&gt;` : &#x27;&#x27;}
+      &lt;/section&gt;`;
+
+    const introScreen = () =&gt; `
+      &lt;div class=&quot;lx-device-label&quot;&gt;&lt;strong&gt;首次打开&lt;/strong&gt;&lt;span&gt;礼物开场页&lt;/span&gt;&lt;/div&gt;
+      &lt;section class=&quot;lx-phone lx-intro&quot;&gt;
+        ${statusBar()}
+        &lt;div class=&quot;lx-intro-copy&quot;&gt;
+          &lt;div class=&quot;lx-intro-mark&quot;&gt;落 · 续&lt;/div&gt;
+          &lt;h1&gt;落笔续写&lt;/h1&gt;
+          &lt;div class=&quot;lx-intro-names&quot;&gt;张续 × 落学富&lt;/div&gt;
+          &lt;p class=&quot;lx-intro-quote&quot;&gt;落笔记录此刻&lt;br&gt;续写我们的以后&lt;/p&gt;
+          &lt;div class=&quot;lx-intro-date&quot;&gt;始于 2025.06.29&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;lx-intro-action&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;lx-primary&quot; data-action=&quot;start&quot;&gt;开始续写&lt;/button&gt;&lt;/div&gt;
+      &lt;/section&gt;`;
+
+    const render = () =&gt; {
+      let content = &#x27;&#x27;;
+      if (state.intro) content = introScreen();
+      else if (state.device === &#x27;android&#x27; &amp;&amp; state.view === &#x27;android-lock&#x27;) content = androidLock();
+      else if (state.device === &#x27;android&#x27; &amp;&amp; state.view === &#x27;received&#x27;) content = receivedScreen();
+      else content = iphoneScreen();
+      root.innerHTML = `&lt;div class=&quot;lx-stage&quot;&gt;${content}&lt;/div&gt;`;
+      if (typeof lucide !== &#x27;undefined&#x27;) lucide.createIcons({ attrs: { width: 16, height: 16 } });
+    };
+
+    const flash = (message) =&gt; {
+      state.toast = message;
+      render();
+      window.setTimeout(() =&gt; {
+        if (state.toast === message) {
+          state.toast = &#x27;&#x27;;
+          render();
+        }
+      }, 1700);
+    };
+
+    root.addEventListener(&#x27;click&#x27;, (event) =&gt; {
+      const navButton = event.target.closest(&#x27;[data-nav]&#x27;);
+      if (navButton) {
+        state.view = navButton.dataset.nav;
+        state.toast = &#x27;&#x27;;
+        render();
+        return;
+      }
+
+      const moodButton = event.target.closest(&#x27;[data-mood]&#x27;);
+      if (moodButton) {
+        state.mood = moodButton.dataset.mood;
+        state.overlay = null;
+        flash(`今日心情已改为“${state.mood}”`);
+        return;
+      }
+
+      const wishButton = event.target.closest(&#x27;[data-wish]&#x27;);
+      if (wishButton) {
+        const index = Number(wishButton.dataset.wish);
+        state.wishes[index] = !state.wishes[index];
+        flash(state.wishes[index] ? &#x27;愿望已盖上“已实现”印章&#x27; : &#x27;愿望已放回计划中&#x27;);
+        return;
+      }
+
+      const actionButton = event.target.closest(&#x27;[data-action]&#x27;);
+      if (!actionButton) return;
+      const action = actionButton.dataset.action;
+
+      if (action === &#x27;start&#x27;) {
+        state.intro = false;
+        state.view = &#x27;home&#x27;;
+        render();
+      } else if (action === &#x27;miss&#x27;) {
+        flash(&#x27;“张续现在有一点想你”已送达&#x27;);
+      } else if (action === &#x27;mood&#x27;) {
+        state.overlay = &#x27;mood&#x27;;
+        render();
+      } else if (action === &#x27;secret&#x27;) {
+        state.overlay = &#x27;secret&#x27;;
+        render();
+      } else if (action === &#x27;close-overlay&#x27;) {
+        state.overlay = null;
+        render();
+      } else if (action === &#x27;check-secret&#x27;) {
+        const input = root.querySelector(&#x27;#lx-secret-code&#x27;);
+        if (input &amp;&amp; input.value === &#x27;0629&#x27;) {
+          state.secretSolved = true;
+          render();
+        } else {
+          flash(&#x27;暗号不对，再想想故事开始的日期&#x27;);
+        }
+      } else if (action === &#x27;send&#x27;) {
+        const caption = root.querySelector(&#x27;#lx-caption&#x27;);
+        if (caption &amp;&amp; caption.value.trim()) state.caption = caption.value.trim();
+        state.device = &#x27;android&#x27;;
+        state.view = &#x27;android-lock&#x27;;
+        state.toast = &#x27;&#x27;;
+        render();
+      } else if (action === &#x27;open-notification&#x27;) {
+        state.view = &#x27;received&#x27;;
+        render();
+      } else if (action === &#x27;android-lock&#x27;) {
+        state.view = &#x27;android-lock&#x27;;
+        render();
+      } else if (action === &#x27;back-sender&#x27;) {
+        state.device = &#x27;iphone&#x27;;
+        state.view = &#x27;home&#x27;;
+        render();
+      } else if (action === &#x27;reply&#x27;) {
+        state.replySent = true;
+        flash(&#x27;你的回应已经送给张续&#x27;);
+      } else if (action === &#x27;locked&#x27;) {
+        flash(&#x27;时间还没到，这封信会替你们好好保管&#x27;);
+      } else if (action === &#x27;voice&#x27;) {
+        state.voicePlaying = !state.voicePlaying;
+        render();
+      }
+    });
+
+    render();
+  })();
+&lt;/script&gt;
+
+&lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/@floating-ui/dom@1.7.4/dist/floating-ui.dom.umd.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handleLeave = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-lucide&quot; async src=&quot;https://unpkg.com/lucide@1.17.0/dist/umd/lucide.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js'));
+}
+</script>
+</body>
+</html>
