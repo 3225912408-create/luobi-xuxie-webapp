@@ -61,5 +61,6 @@
     document.getElementById('finishBind').onclick=()=>{if(!role){error.textContent='请先选择你是谁';return}if(document.getElementById('pairCode').value.trim().toUpperCase()!=='LBXX-0629'){error.textContent='绑定码不正确';return}localStorage.setItem('luobiAccount',JSON.stringify({phone:localStorage.getItem('luobiPhone'),role,pairCode:'LBXX-0629'}));auth.hidden=true};
     if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
   </script>
+  <script src="./auth-v2.js"></script>
 </body>
 </html>
