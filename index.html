@@ -12,12 +12,54 @@
   <link rel="apple-touch-icon" href="./icon.svg">
   <title>落笔续写</title>
   <style>
-    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f8f4ef}
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#f8f4ef;color:#34272c;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
     iframe{display:block;width:100%;height:100%;border:0;background:#f8f4ef}
+    .auth{position:fixed;z-index:10;inset:0;display:grid;place-items:center;padding:24px;background:linear-gradient(150deg,#f8f4ef,#f2e5e5 58%,#e8d3d5)}
+    .auth[hidden]{display:none}.card{width:min(390px,100%);padding:34px 26px;border:1px solid rgba(113,55,70,.16);border-radius:28px;background:rgba(255,252,248,.92);box-shadow:0 22px 60px rgba(88,47,60,.14)}
+    .mark{width:58px;height:58px;display:grid;place-items:center;margin:auto;border-radius:20px;background:#713746;color:#fff9f3;font-family:serif;font-size:18px}.card h1{text-align:center;margin:18px 0 7px;font-family:serif;font-weight:500}.sub{text-align:center;margin:0 0 25px;color:#8b747b;font-size:13px;line-height:1.7}
+    label{display:block;margin:14px 0 7px;color:#6f565f;font-size:13px}input{width:100%;padding:14px;border:1px solid #dcc9cd;border-radius:15px;background:#fff;color:#34272c;font-size:16px;outline:none}input:focus{border-color:#9b6270;box-shadow:0 0 0 3px rgba(155,98,112,.12)}
+    button{width:100%;margin-top:15px;padding:14px;border:0;border-radius:15px;background:#713746;color:#fff;font-size:15px;font-weight:600}.secondary{background:#eee3e4;color:#713746}.hint{margin:12px 0 0;text-align:center;color:#967b83;font-size:12px}.error{min-height:18px;margin:8px 0 0;color:#b24f5e;font-size:12px}.roles{display:grid;grid-template-columns:1fr 1fr;gap:10px}.roles button{margin-top:0;background:#eee3e4;color:#713746}.roles button.active{background:#713746;color:#fff}.code{margin:14px 0;padding:15px;border:1px dashed #b88994;border-radius:15px;text-align:center;color:#713746;font:600 22px Georgia,serif;letter-spacing:3px}
   </style>
 </head>
 <body>
+  <section class="auth" id="auth" aria-label="手机号注册与双人绑定">
+    <div class="card">
+      <div class="mark">落·续</div>
+      <h1 id="authTitle">手机号登录</h1>
+      <p class="sub" id="authSub">第一次登录会自动创建账号<br>体验版验证码为 0629</p>
+      <div id="phoneStep">
+        <label for="phone">中国大陆手机号</label>
+        <input id="phone" inputmode="tel" autocomplete="tel" maxlength="11" placeholder="请输入 11 位手机号">
+        <button id="sendCode" type="button">获取验证码</button>
+      </div>
+      <div id="codeStep" hidden>
+        <label for="smsCode">短信验证码</label>
+        <input id="smsCode" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="请输入 0629">
+        <button id="verifyCode" type="button">登录并继续</button>
+        <button id="changePhone" class="secondary" type="button">更换手机号</button>
+      </div>
+      <div id="bindStep" hidden>
+        <p class="sub">选择你是谁，然后与另一台手机绑定</p>
+        <div class="roles"><button type="button" data-role="张续">我是张续</button><button type="button" data-role="落学富">我是落学富</button></div>
+        <div class="code">LBXX-0629</div>
+        <label for="pairCode">另一台手机填写同一个绑定码</label>
+        <input id="pairCode" autocomplete="off" value="LBXX-0629">
+        <button id="finishBind" type="button">进入我们的空间</button>
+      </div>
+      <p class="error" id="authError" role="alert"></p>
+    </div>
+  </section>
   <iframe src="./preview.html" title="落笔续写"></iframe>
-  <script>if('serviceWorker' in navigator){addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'))}</script>
+  <script>
+    const auth=document.getElementById('auth'),phoneStep=document.getElementById('phoneStep'),codeStep=document.getElementById('codeStep'),bindStep=document.getElementById('bindStep'),error=document.getElementById('authError');
+    let role='';
+    if(localStorage.getItem('luobiAccount')) auth.hidden=true;
+    document.getElementById('sendCode').onclick=()=>{const phone=document.getElementById('phone').value.trim();if(!/^1\d{10}$/.test(phone)){error.textContent='请输入正确的 11 位手机号';return}localStorage.setItem('luobiPhone',phone);error.textContent='';phoneStep.hidden=true;codeStep.hidden=false;document.getElementById('authTitle').textContent='输入验证码';document.getElementById('authSub').textContent=`验证码将发送至 ${phone.slice(0,3)}****${phone.slice(-4)}（体验版填 0629）`};
+    document.getElementById('changePhone').onclick=()=>{codeStep.hidden=true;phoneStep.hidden=false;error.textContent=''};
+    document.getElementById('verifyCode').onclick=()=>{if(document.getElementById('smsCode').value.trim()!=='0629'){error.textContent='体验版验证码是 0629';return}error.textContent='';codeStep.hidden=true;bindStep.hidden=false;document.getElementById('authTitle').textContent='绑定我们';document.getElementById('authSub').textContent='张续 × 落学富'};
+    document.querySelectorAll('[data-role]').forEach(button=>button.onclick=()=>{role=button.dataset.role;document.querySelectorAll('[data-role]').forEach(x=>x.classList.toggle('active',x===button));error.textContent=''});
+    document.getElementById('finishBind').onclick=()=>{if(!role){error.textContent='请先选择你是谁';return}if(document.getElementById('pairCode').value.trim().toUpperCase()!=='LBXX-0629'){error.textContent='绑定码不正确';return}localStorage.setItem('luobiAccount',JSON.stringify({phone:localStorage.getItem('luobiPhone'),role,pairCode:'LBXX-0629'}));auth.hidden=true};
+    if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('./sw.js'));
+  </script>
 </body>
 </html>

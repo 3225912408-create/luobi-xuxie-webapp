@@ -1,0 +1,11 @@
+{
+  "appId": "com.luobixuxie.app",
+  "appName": "落笔续写",
+  "webDir": "web",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "backgroundColor": "#f8f4ef"
+  }
+}

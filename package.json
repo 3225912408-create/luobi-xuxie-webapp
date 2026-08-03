@@ -1,0 +1,10 @@
+{
+  "name": "luobi-xuxie-android",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/core": "^7.4.3"
+  }
+}
