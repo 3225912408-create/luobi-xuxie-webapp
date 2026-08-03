@@ -9,6 +9,14 @@
   const API_BASE = localStorage.getItem('luobiApiBase') || '';
   let role = '';
 
+  try {
+    const savedAccount = JSON.parse(localStorage.getItem('luobiAccount') || 'null');
+    if (!savedAccount || savedAccount.authVersion !== 2) auth.hidden = false;
+  } catch {
+    auth.hidden = false;
+    localStorage.removeItem('luobiAccount');
+  }
+
   title.textContent = '手机号＋密码';
   subtitle.innerHTML = API_BASE
     ? '登录后，两台手机会进入同一个情侣空间'
@@ -74,7 +82,7 @@
       const pairCode = document.getElementById('pairCode').value.trim().toUpperCase();
       if (!/^LBXX-[A-Z0-9]{4}$/.test(pairCode)) throw new Error('请输入正确的情侣绑定码');
       const result = await request('/pairs/join', { pairCode, role });
-      localStorage.setItem('luobiAccount', JSON.stringify({ phone: localStorage.getItem('luobiPhone'), role, pairCode, offline: !!result.offline }));
+      localStorage.setItem('luobiAccount', JSON.stringify({ authVersion: 2, phone: localStorage.getItem('luobiPhone'), role, pairCode, offline: !!result.offline }));
       auth.hidden = true;
     } catch (cause) {
       error.textContent = cause.message;
